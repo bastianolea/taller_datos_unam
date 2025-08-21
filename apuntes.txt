@@ -21,6 +21,11 @@ hablar de trayectoria personal
 sociología, teoría de género
 magíster: cursos cuantitativos
 
+mostrarse,
+diferenciarse,
+compartir
+
+# Mostrarse
 
 ## Portafolio
 presentar portafolio
@@ -44,11 +49,15 @@ Pares tipográficos
 ggplot2 con temas
 
 
-## Mostrarse
+## Compartir
 Stack Overflow
 Redes sociales
 crear repositorios github, usethis
 Readme, subir repo con imágenes y enlaces
+Github Gist
+Hashtags, colgarse de otras cuentas
+Tidytuesday
+
 Volverse encontrable
 
 
@@ -69,3 +78,13 @@ Subir a shinyapps.io
 
 ## Conclusiones
 Demasiado contenido, así que hay que buscar crear cosas que te sirvan, que te conecten, y que sean relevantes
+
+
+
+
+
+PRACTICAR
+
+usethis::github
+github pages
+blog quarto
