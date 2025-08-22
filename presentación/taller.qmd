@@ -1,0 +1,118 @@
+---
+title: "Taller"
+author: "Bastián Olea Herrera"
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    highlight-style: "github-dark"
+    footer: "Bastián Olea Herrera — https://bastianolea.rbind.io"
+execute: 
+  echo: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Sitio
+
+![](img/sitio.png){.borde .linea}
+
+----
+
+### Blog
+
+:::: {.columns}
+
+::: {.column width="45%" style="margin-top:10px;"}
+![](img/blog1.png){.borde .linea}
+::: 
+::: {.column width="55%" style="margin-top:-28px;"}
+![](img/blog2.png){.borde .linea}
+::: 
+::::
+
+----
+
+### Aplicaciones
+
+Aplicaciones bla bla
+https://bastianolea.github.io/shiny_apps/
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](img/apps1.png){.borde}
+:::
+
+::: {.column width="50%"}
+![](img/apps2.png){.borde}
+:::
+
+::::
+
+----
+
+### Datos
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](img/datos.png){.borde}
+:::
+
+::: {.column width="40%"}
+Datos bla bla
+https://bastianolea.github.io/datos_sociales/
+:::
+::::
+
+## Quarto
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+:::
+
+::::
+
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you `click` the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+. . .
+
+```{r}
+library(dplyr)
+frutas_x <- tibble(fruta = c("pera", "manzana", "uva"),
+                   color = c("verde", "roja", "morada"))
+```
+
+
+## Tipografías
+- [fonts.google.com](https://fonts.google.com/), tipografías de Google
+- [fontpair.co](https://www.fontpair.co/all), pares de tipografías
+
+## Colores
+
+- [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
+- [pigment.shapefactory.co](https://pigment.shapefactory.co), paletas de colores
+- [2colors.colorion.co](https://2colors.colorion.co), pares de colores
+- [realtimecolors.com](https://www.realtimecolors.com), simulador de interfaz web con paletas de colores

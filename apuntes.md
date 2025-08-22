@@ -1,6 +1,6 @@
-Diplomado UNAM
-Jésica Benjamín
-depto de estudios y análisis territorial
+## Diplomado UNAM
+- Jésica Benjamín
+
 para personas sin experiencia en programación, módulo 6 - 10 sesiones
 “marca personal”
 
@@ -15,17 +15,27 @@ enviar semblanza, foto enviar enlace a sitio web
 
 ⸺
 
+Resumen
+presentación
+contarles mi experiencia
+compartirles algunos consejos prácticos
 
 ## Trayectoria
 hablar de trayectoria personal
 sociología, teoría de género
 magíster: cursos cuantitativos
+autodidacta
+creación de proyectos de análisis de datos enfocados en problemáticas sociales y economía
 
-mostrarse,
+División de políticas y estudios, Subsecretaría de desarrollo regional y administrativo
+
+crear
+mostrar,
 diferenciarse,
 compartir
 
 # Mostrarse
+diagnóstico: internet controlada por grandes corporaciones
 
 ## Portafolio
 presentar portafolio
@@ -37,12 +47,16 @@ apps para explorar
 apps para visibilizar temas sociales
 apps para esclarecer datos y relatos
 
-Buscar temas de su experticia y relevancia social 
 
-Usar lenguaje inclusivo para personas de distintos niveles de conocimientos
+## crear
+Buscar temas de su experticia y relevancia social 
+Repositorios de datos públicos
+Reutilización de datos públicos
 
 
 ## Distinguirse
+
+Usar lenguaje inclusivo para personas de distintos niveles de conocimientos
 ggplot2 con tipografías: https://r-graph-gallery.com/package/showtext.html
 ggplot2 con temas: https://rstudio.github.io/thematic/
 Shiny app con temas: https://rstudio.github.io/bslib/articles/theming/index.html
@@ -58,17 +72,18 @@ Github Gist
 Imágenes de código: https://carbon.now.sh, https://ray.so
 Hashtags, colgarse de otras cuentas
 Tidytuesday
+[Latin R](https://latinr.org)
+RLadies
 
 Volverse encontrable
 
-
-## Compartir
 Visualizaciones
 
-Documentos Quarto
-Quarto en GitHub pages
-Blog quarto
-Dominio Rbind.io
+Documentos Quarto https://bastianolea.rbind.io/blog/quarto_reportes/
+Quarto en GitHub pages https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#documento-quarto-en-github-pages
+Blog Quarto https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#blogs-quarto-en-github-pages
+Blog Hugo https://hugo-apero.netlify.app https://hugo-apero-docs.netlify.app
+Dominio Rbind.io https://support.rbind.io/about/
 
 Escribir todo lo que aprendas, así refuerzas el aprendizaje, te haces visible, y compartes con los demás
 Crear una caja de herramientas

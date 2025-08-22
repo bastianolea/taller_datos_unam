@@ -1,0 +1,89 @@
+/*https://quarto.org/docs/presentations/revealjs/themes.html*/
+
+/*-- scss:defaults --*/
+
+// fonts
+$font-family-sans-serif: "Atkinson Hyperlegible", Helvetica, Arial, serif !default;
+$presentation-font-size-root: 30px;
+$presentation-line-height: 1.2;
+
+// headings
+$presentation-heading-font: "EB Garamond";
+$presentation-heading-color: #6E3A98 !default;
+
+$presentation-h1-font-size:	2.5em;
+$presentation-h2-font-size:	1.8em;
+$presentation-h3-font-size:	1.6em;
+$presentation-h4-font-size: 1em;
+
+// colors
+$body-bg: #EAD1FA !default;
+$body-color: #553A74 !default;
+$link-color: #9069C0 !default;
+$link-color-hover: #C18EFF !default;
+$selection-bg: #F6F1FA !default;
+
+// inline code
+$code-color:  #553A74 !default;
+$code-bg: #F4E8FD;
+
+// code blocks
+$code-block-bg: #31243B;
+$code-block-border-color:	lighten($body-color, 60%);
+$code-block-font-size:	0.55em;
+
+// bold
+strong {
+  color: #9069C0 !important; /* Or any other desired color */
+}
+
+// footer
+.reveal .footer {
+  font-size: 0.4em !important;
+}
+
+.espaciar {
+      padding-right: 10%; /* Adjust the percentage as needed */
+}
+    
+.borde {
+  border-radius: 7px !important;
+}
+
+.borde-linea {
+  border-radius: 8px !important;
+}
+
+.linea {
+  border: solid 2px #DBC4EA;
+}
+
+.centrar {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+
+// images
+.reveal section.img_container {
+        width: 90%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+.reveal section img {
+        display: block;
+        margin: auto;
+        height: auto;
+        max-height: 90%;
+        width: auto;
+        max-width: 90%;
+}
+
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
