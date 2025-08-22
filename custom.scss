@@ -60,6 +60,7 @@ strong {
     
 .borde {
   border-radius: 7px !important;
+  margin: 12px !important;
 }
 
 .borde-linea {
@@ -98,4 +99,13 @@ strong {
 .reveal .slide blockquote {
   border-left: 3px solid $text-muted;
   padding-left: 0.5em;
+}
+
+
+.grande
+{
+    border: none;
+    box-shadow: none;
+    max-height: calc(66vh);
+    max-width: calc(66vw);
 }

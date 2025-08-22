@@ -28,8 +28,73 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #e1e4e8; background-color: #24292e; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #e1e4e8; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #f97583; } /* Attribute */
+    code span.bn { color: #79b8ff; } /* BaseN */
+    code span.bu { color: #f97583; } /* BuiltIn */
+    code span.cf { color: #f97583; } /* ControlFlow */
+    code span.ch { color: #9ecbff; } /* Char */
+    code span.cn { color: #79b8ff; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #f97583; } /* DataType */
+    code span.dv { color: #79b8ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
+    code span.fl { color: #79b8ff; } /* Float */
+    code span.fu { color: #b392f0; } /* Function */
+    code span.im { color: #9ecbff; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #f97583; } /* Keyword */
+    code span.op { color: #e1e4e8; } /* Operator */
+    code span.ot { color: #b392f0; } /* Other */
+    code span.pp { color: #f97583; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #79b8ff; } /* SpecialChar */
+    code span.ss { color: #9ecbff; } /* SpecialString */
+    code span.st { color: #9ecbff; } /* String */
+    code span.va { color: #ffab70; } /* Variable */
+    code span.vs { color: #9ecbff; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-daef90dc8cab369c2b07e0589be41fdc.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-d8bc3bf44dac0504c5afd4023848832c.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -162,7 +227,7 @@ Bastián Olea Herrera
 <h2>Portafolio</h2>
 <p>Aplicaciones desarrolladas en R y <code>{shiny}</code> centradas en visualización de datos públicos</p>
 
-<img data-src="img/pantallazo.png" class="borde linea r-stretch"></section>
+<img data-src="img/pantallazo_2.png" class="borde linea r-stretch"></section>
 <section id="aplicaciones" class="slide level2">
 <h2>Aplicaciones</h2>
 <p><a href="https://bastianolea.github.io/shiny_apps/">Página web</a> para presentar mis aplicaciones.</p>
@@ -194,9 +259,9 @@ Bastián Olea Herrera
 <section id="repositorio-de-datos" class="slide level2">
 <h2>Repositorio de datos</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:50%;">
 <p><img data-src="img/datos.png" class="borde"></p>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:50%;">
 <ul>
 <li><a href="https://bastianolea.github.io/datos_sociales/">Otra página web</a> donde voy manteniendo un repositorio de datos sociales que he usado para otros proyectos.</li>
 <li>La idea es recolectar todo en un mismo lugar para <strong>facilitar el acceso a datos</strong>.</li>
@@ -265,14 +330,38 @@ Bastián Olea Herrera
 <li><a href="https://fonts.google.com/">fonts.google.com</a>, tipografías de Google</li>
 <li><a href="https://www.fontpair.co/all">fontpair.co</a>, pares de tipografías</li>
 </ul>
-<p><br></p>
+<p>Gráficos de <code>{ggplot2}</code> con tipografías personalizadas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(showtext)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Montserrat"</span>) <span class="co"># descargar</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="co"># activar el uso de tipografías</span></span>
+<span id="cb1-6"><a></a><span class="fu">showtext_auto</span>()</span>
+<span id="cb1-7"><a></a><span class="fu">showtext_opts</span>(<span class="at">dpi =</span> <span class="dv">300</span>) <span class="co"># resolución para que se vean bien</span></span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="co"># cambiar tipografía global</span></span>
+<span id="cb1-10"><a></a>grafico <span class="sc">+</span></span>
+<span id="cb1-11"><a></a>  <span class="fu">theme_classic</span>(<span class="at">base_family =</span> <span class="st">"Montserrat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
 <h3 id="colores">Colores</h3>
-<ul>
-<li><a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a></li>
-<li><a href="https://pigment.shapefactory.co">pigment.shapefactory.co</a>, paletas de colores</li>
-<li><a href="https://2colors.colorion.co">2colors.colorion.co</a>, pares de colores</li>
-<li><a href="https://www.realtimecolors.com">realtimecolors.com</a>, simulador de interfaz web con paletas de colores</li>
-</ul>
+<p>Aplicaciones Shiny con temas de colores, incluyendo gráficos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">thematic_shiny</span>()</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">page_fluid</span>(</span>
+<span id="cb2-4"><a></a>  </span>
+<span id="cb2-5"><a></a>  <span class="at">theme =</span> <span class="fu">bs_theme</span>(</span>
+<span id="cb2-6"><a></a>    <span class="at">bg =</span> color_fondo,</span>
+<span id="cb2-7"><a></a>    <span class="at">fg =</span> color_texto,</span>
+<span id="cb2-8"><a></a>    <span class="at">primary =</span> color_primario</span>
+<span id="cb2-9"><a></a>  )</span>
+<span id="cb2-10"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br> Recursos para encontrar colores: - <a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a> - <a href="https://pigment.shapefactory.co">pigment.shapefactory.co</a>, paletas de colores - <a href="https://2colors.colorion.co">2colors.colorion.co</a>, pares de colores - <a href="https://www.realtimecolors.com">realtimecolors.com</a>, simulador de interfaz web con paletas de colores</p>
 </section></section>
 <section>
 <section id="compartir" class="title-slide slide level1 center">
@@ -307,6 +396,68 @@ Bastián Olea Herrera
 </ul></li>
 </ul>
 </section>
+<section class="slide level2">
+
+<h3 id="compartir-códigos-breves">Compartir códigos breves</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<h4 id="github-gists">GitHub Gists</h4>
+<p>Una forma rápida de subir pedazos de código para poder compartirlo</p>
+<div style="margin:30px;">
+<p><img data-src="img/gist.png" class="borde linea"></p>
+</div>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<h4 id="pantallazos">Pantallazos</h4>
+<p>Usa servicios online como <a href="https://carbon.now.sh">carbon.now.sh</a> o <a href="https://ray.so">ray.so</a> para crear imágenes con código</p>
+<p><img data-src="img/snippet.png" class="borde linea"></p>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="crear-un-repositorio-en-github">Crear un repositorio en GitHub</h3>
+<p>Crear un repositorio local para tu código:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git</span>() <span class="co"># crear repositorio local</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>Configurar GitHub:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() <span class="co"># crear token de tu cuenta</span></span>
+<span id="cb4-2"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>() <span class="co"># guardar token para autorizar tu pc</span></span>
+<span id="cb4-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"usuario"</span>, <span class="at">user.email =</span> <span class="st">"correo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Subir tu repositorio local a GitHub, creando un <em>espejo</em> de tu código en el repositorio remoto:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_github</span>() <span class="co"># subir repo local a github</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>Revisa el <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_github/">tutorial completo aquí!</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="crear-un-archivo-readme.md">Crear un archivo <code>readme.md</code></h3>
+<p>Crea un archivo de texto <em>Markdown</em> (extensión <code>.md</code>) para explicar al mundo de qué se trata tu repositorio!</p>
+<p><em>Titulares:</em></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu"># Título 1</span></span>
+<span id="cb6-2"><a></a><span class="fu">## Título 2</span></span>
+<span id="cb6-3"><a></a><span class="fu">### Título 3, etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Estilos de texto:</em></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a>**negrita**</span>
+<span id="cb7-2"><a></a>*itálica* o _itálica_</span>
+<span id="cb7-3"><a></a>&lt;u&gt;subrayado&lt;/u&gt;</span>
+<span id="cb7-4"><a></a>~~tachado~~</span>
+<span id="cb7-5"><a></a><span class="in">`código`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Imágenes:</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="sc">!</span>[](mapache.jpeg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En cierta forma es como una página web muy básica 🥺</p>
+</section>
 <section id="crear-1" class="slide level2">
 <h2>Crear</h2>
 <p>Crear un lugar, volverse <em>encontrable</em></p>
@@ -320,6 +471,157 @@ Bastián Olea Herrera
 <li class="fragment"><a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Crea aplicaciones web interactivas con Shiny</a> y <a href="https://www.shinyapps.io">súbelas a la web</a> rápido y gratis 🪐</li>
 </ul>
 </div>
+</section>
+<section class="slide level2">
+
+<h3 id="quarto">Quarto</h3>
+<p>Crea documentos que mezclen texto, código y gráficos desde R.</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><em>Vista desde RStudio</em> <img data-src="img/quarto_2.png" class="borde linea"></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><em>Ejemplo de un reporte</em> <img data-src="img/quarto_ejemplo1.png" class="borde linea"></p>
+</div></div>
+<p>Revisa el <a href="https://bastianolea.rbind.io/blog/quarto_reportes/">tutorial de Quarto aquí!</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="github-pages">GitHub Pages</h3>
+<ol type="1">
+<li>Subir documento Quarto a un repositorio GitHub</li>
+<li>Crear un archivo <code>_quarto.yml</code>:</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb9-2"><a></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Creamos un archivo vacío llamado <code>.nojekyll</code></li>
+<li>Subir cambios del repositorio local al <strong>repositorio remoto</strong> en GitHub</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="github-pages-1">GitHub Pages</h3>
+<ol start="5" type="1">
+<li>Entra a la pestaña <em>Settings</em> del repositorio remoto:</li>
+</ol>
+
+<img data-src="img/quarto_5.png" class="borde linea r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="github-pages-2">GitHub Pages</h3>
+<ol start="6" type="1">
+<li>Entra a <em>Pages</em>, elige la rama y elige <code>/docs</code></li>
+</ol>
+
+<img data-src="img/quarto_6.png" class="grande borde linea r-stretch"><p>Revisa el <a href="https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#documento-quarto-en-github-pages">tutorial completo aquí!</a> <br></p>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-quarto">Blog Quarto</h3>
+<div class="columns">
+<div class="column" style="width:50;">
+<ol type="1">
+<li>Crear un nuevo proyecto desde RStudio usando <strong>Quarto Blog</strong>:</li>
+</ol>
+<p><img data-src="img/blog_1.png" class="borde linea"></p>
+</div><div class="column" style="width:50;">
+<ol start="2" type="1">
+<li>Listo! Se crea un blog Quarto, puedes agregar publicaciones en <code>posts</code> <img data-src="img/blog_2.png" class="borde linea"></li>
+</ol>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-quarto-1">Blog Quarto</h3>
+<p>Para subirlo a GitHub Pages es similar a las instrucciones anteriores:</p>
+<ol type="1">
+<li>En <code>_quarto.yml</code> agregamos <code>output-dir: docs</code> debajo de <code>project:</code>.</li>
+<li>En el proyecto, creamos un nuevo archivo vacío que se llame <code>.nojekyll</code></li>
+<li>Le damos <em>Render</em> al documento <code>index.qmd</code> o en la pestaña Terminal ejecutamos <code>quarto render</code></li>
+<li>Creamos un repositorio git con <code>usethis::use_git()</code></li>
+<li>Subimos el repositorio a GitHub con <code>usethis::use_github()</code></li>
+<li>En GitHub, entramos a <em>Settings</em>, luego a <em>Pages</em>, y configuramos el repositorio para que genere la página desde <code>/docs</code></li>
+</ol>
+<p>Elige un <a href="https://quarto.org/docs/output-formats/html-themes.html">tema desde la documentacion</a> y aplícalo en <code>_quarto.yml</code>.</p>
+<p>Revisa el <a href="https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#blogs-quarto-en-github-pages">tutorial completo aquí!</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo">Blog Hugo</h3>
+<div class="columns">
+<div class="column" style="width:50;">
+<p><img data-src="img/hugo_0.png" class="grande borde linea"></p>
+</div><div class="column" style="width:50;">
+<p>Hugo es una plataforma para crear blogs en base a Markdown y el lenguaje de programación Go. Gracias al tema <a href="https://hugo-apero-docs.netlify.app">Hugo Apéro</a> se puede crear un blog elegante y funcional desde R en pocos pasos.</p>
+<p>Instalar <code>{blogdown}</code> e instalar Hugo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">install.packages</span>(<span class="st">"blogdown"</span>)</span>
+<span id="cb10-2"><a></a>blogdown<span class="sc">::</span><span class="fu">install_hugo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p>Instrucciones detalladas <a href="https://hugo-apero-docs.netlify.app">disponibles en este blog.</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo-1">Blog Hugo</h3>
+<p>Creamos el blog con la siguiente función:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(blogdown)</span>
+<span id="cb11-2"><a></a><span class="fu">new_site</span>(<span class="at">theme =</span> <span class="st">"hugo-apero/hugo-apero"</span>, </span>
+<span id="cb11-3"><a></a>           <span class="at">format =</span> <span class="st">"toml"</span>,</span>
+<span id="cb11-4"><a></a>           <span class="at">sample =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb11-5"><a></a>           <span class="at">empty_dirs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para ver el sitio ejecutamos <code>blogdown::serve_site()</code></p>
+<p>Tenemos la función <code>blogdown::new_post()</code> crear un nuevo post:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>blogdown<span class="sc">::</span><span class="fu">new_post</span>(<span class="at">title =</span> <span class="st">"Mi primer post en Hugo"</span>, </span>
+<span id="cb12-2"><a></a>                   <span class="at">subdir =</span> <span class="st">"blog/"</span>,</span>
+<span id="cb12-3"><a></a>                   <span class="at">file =</span> <span class="st">"blog/primero/index.md"</span>,</span>
+<span id="cb12-4"><a></a>                   <span class="at">author =</span> <span class="st">"Bastián Olea Herrera"</span>,</span>
+<span id="cb12-5"><a></a>                   <span class="at">tags =</span> <span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"gráficos"</span>, <span class="st">"curiosidades"</span>)</span>
+<span id="cb12-6"><a></a>                   )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo-2">Blog Hugo</h3>
+<p>Instrucciones para <a href="https://hugo-apero-docs.netlify.app/start/deploy/">subir el blog a internet</a>:</p>
+<ol type="1">
+<li>Creamos un repositorio git con <code>usethis::use_git()</code></li>
+<li>Subimos el repositorio a GitHub con <code>usethis::use_github()</code></li>
+<li>Entrar a <a href="https://app.netlify.com/">Netlify</a> y el <em>Projects</em>, seleccionar <em>Add new project</em></li>
+<li>Elegir el repositorio de GitHub que creamos, dejar todo como está y poner <em>Deploy Site</em></li>
+<li>En <code>config.toml</code>, cambiar <code>baseURL</code> por la dirección del sitio subido (del paso anterior). Subir este cambio a GitHub.</li>
+<li>Revisar con <code>blogdown::config_netlify()</code> y luego <code>blogdown::check_netlify()</code></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo-3">Blog Hugo</h3>
+<p>Como Hugo usa Markdown y no Quarto, si queremos crear documentos <code>.qmd</code> que usen los resultados del código de R, debemos agregar lo siguiente al encabezado de cada post:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>format<span class="sc">:</span></span>
+<span id="cb13-2"><a></a>  hugo<span class="sc">-</span>md<span class="sc">:</span></span>
+<span id="cb13-3"><a></a>    output<span class="sc">-</span>file<span class="sc">:</span> <span class="st">"index"</span></span>
+<span id="cb13-4"><a></a>    output<span class="sc">-</span>ext<span class="sc">:</span> <span class="st">"md"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="shiny">Shiny</h3>
+<div class="columns">
+<div class="column" style="width:50;">
+<p>Para crear una aplicación Shiny, creamos un nuevo proyecto y elegimos <em>Shiny Application</em>.</p>
+<p><img data-src="img/shiny_0.png" class="borde linea"></p>
+<p>Revisa un <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_shiny_1/">mini tutorial aquí.</a></p>
+</div><div class="column" style="width:50;">
+<p>Desde el mismo panel de RStudio puedes publicar tu aplicación a ShinyApps.io con el botón Publish.</p>
+<p><img data-src="img/tutorial_shinyapps_7.png" class="borde linea"></p>
+<p>Guía para subir tu app <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_shinyapps/">en este tutorial!</a></p>
+</div></div>
 </section>
 <section id="consejos" class="slide level2">
 <h2>Consejos</h2>
@@ -550,6 +852,44 @@ Bastián Olea Herrera
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
