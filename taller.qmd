@@ -18,9 +18,12 @@ editor_options:
 - Mi experiencia con el análisis de datos desde la **sociología**
 - Revisar algunos de mis proyectos de **análisis de datos con R**
 - Principios para guiarnos:
-  1. _Crear_
-  2. _Diferenciarse_
-  3. _Compartir_
+1. _Crear_
+2. _Diferenciarse_
+3. _Compartir_
+
+<br>
+
 - **Consejos prácticos** para lograrlo <span style="font-size: 120%; color: #9069C0;">♥</span>
 
 
@@ -155,10 +158,10 @@ Visualizador de datos de [proyecciones de población del Censo, Chile](https://b
 ::: {.incremental}
 - Abordar temáticas de forma **inclusiva** a todo público
 - Preocuparse por la apariencia de los productos!
-  - Gráficos `{ggplot2}` con [temas de colores](https://rstudio.github.io/thematic/) con `{thematic}` y [tipografías](https://r-graph-gallery.com/package/showtext.html) con `{showtext}` 
-  - Aplicaciones `{shiny}` con [temas de colores](https://rstudio.github.io/bslib/articles/theming/index.html) con `{bslib}`
-  - Atención a las tipografías: pares tipográficos ️✒️💎
-  - Selección de paletas de colores llamativas y con personalidad 💅🏼✨
+- Gráficos `{ggplot2}` con [temas de colores](https://rstudio.github.io/thematic/) con `{thematic}` y [tipografías](https://r-graph-gallery.com/package/showtext.html) con `{showtext}` 
+- Aplicaciones `{shiny}` con [temas de colores](https://rstudio.github.io/bslib/articles/theming/index.html) con `{bslib}`
+- Atención a las tipografías: pares tipográficos ️✒️💎
+- Selección de paletas de colores llamativas y con personalidad 💅🏼✨
 :::
 
 ----
@@ -170,6 +173,7 @@ Visualizador de datos de [proyecciones de población del Censo, Chile](https://b
 
 Gráficos de `{ggplot2}` con tipografías personalizadas:
 ```{r}
+#| eval: false
 library(showtext)
 
 font_add_google(name = "Montserrat") # descargar
@@ -188,22 +192,49 @@ grafico +
 
 ### Colores
 
+:::: {.columns}
+
+::: {.column width="50%"}
+Gráficos `{ggplot2}` con temas de colores:
+
+```{r}
+#| eval: false
+library(ggplot2)
+library(thematic)
+
+thematic::thematic_on(bg = "#222222",
+                      fg = "white", 
+                      accent = "#0CE3AC")
+
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width) +
+  geom_histogram()
+```
+:::
+::: {.column width="50%"}
 Aplicaciones Shiny con temas de colores, incluyendo gráficos:
 ```{r}
+#| eval: false
+library(shiny)
+library(thematic)
+
 thematic_shiny()
 
 ui <- page_fluid(
-  
-  theme = bs_theme(
-    bg = color_fondo,
-    fg = color_texto,
-    primary = color_primario
+  theme = bs_theme(bg = color_fondo,
+                   fg = color_texto,
+                   primary = color_primario
   )
 )
 ```
+:::
+::::
 
 <br>
+
 Recursos para encontrar colores:
+
 - [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 - [pigment.shapefactory.co](https://pigment.shapefactory.co), paletas de colores
 - [2colors.colorion.co](https://2colors.colorion.co), pares de colores
@@ -232,10 +263,10 @@ _Diagnóstico:_ estado actual de la internet 😕
 ## Crear
 
 - Crear repositorios en [GitHub](https://github.com/bastianolea) con `{usethis}` 📦
-  - Archivos `readme.md` para documentar y ofrecer contexto
+- Archivos `readme.md` para documentar y ofrecer contexto
 - Subir código _suelto_ a [Gists de GitHub](https://gist.github.com) 🗒️
 - Compartir código en redes sociales 🤓
-  - Herramientas para [crear](https://carbon.now.sh) _[pantallazos](https://ray.so)_ 📸
+- Herramientas para [crear](https://carbon.now.sh) _[pantallazos](https://ray.so)_ 📸
 
 
 ----
@@ -378,7 +409,7 @@ Revisa el [tutorial de Quarto aquí!](https://bastianolea.rbind.io/blog/quarto_r
 2. Crear un archivo `_quarto.yml`:
 ```yaml
 project:
-  output-dir: docs
+output-dir: docs
 ```
 3. Creamos un archivo vacío llamado `.nojekyll`
 4. Subir cambios del repositorio local al **repositorio remoto** en GitHub
@@ -470,9 +501,9 @@ Creamos el blog con la siguiente función:
 ```{r}
 library(blogdown)
 new_site(theme = "hugo-apero/hugo-apero", 
-           format = "toml",
-           sample = FALSE,
-           empty_dirs = TRUE)
+         format = "toml",
+         sample = FALSE,
+         empty_dirs = TRUE)
 ```
 
 Para ver el sitio ejecutamos `blogdown::serve_site()`
@@ -484,7 +515,7 @@ blogdown::new_post(title = "Mi primer post en Hugo",
                    file = "blog/primero/index.md",
                    author = "Bastián Olea Herrera",
                    tags = c("ggplot2", "gráficos", "curiosidades")
-                   )
+)
 ```
 
 
@@ -510,8 +541,8 @@ Como Hugo usa Markdown y no Quarto, si queremos crear documentos `.qmd` que usen
 ```{r}
 format:
   hugo-md:
-    output-file: "index"
-    output-ext: "md"
+  output-file: "index"
+output-ext: "md"
 ```
 
 

@@ -209,12 +209,15 @@ Bastián Olea Herrera
 <ul>
 <li>Mi experiencia con el análisis de datos desde la <strong>sociología</strong></li>
 <li>Revisar algunos de mis proyectos de <strong>análisis de datos con R</strong></li>
-<li>Principios para guiarnos:
+<li>Principios para guiarnos:</li>
+</ul>
 <ol type="1">
 <li><em>Crear</em></li>
 <li><em>Diferenciarse</em></li>
 <li><em>Compartir</em></li>
-</ol></li>
+</ol>
+<p><br></p>
+<ul>
 <li><strong>Consejos prácticos</strong> para lograrlo <span style="font-size: 120%; color: #9069C0;">♥</span></li>
 </ul>
 </section>
@@ -313,13 +316,11 @@ Bastián Olea Herrera
 <div>
 <ul>
 <li class="fragment">Abordar temáticas de forma <strong>inclusiva</strong> a todo público</li>
-<li class="fragment">Preocuparse por la apariencia de los productos!
-<ul>
+<li class="fragment">Preocuparse por la apariencia de los productos!</li>
 <li class="fragment">Gráficos <code>{ggplot2}</code> con <a href="https://rstudio.github.io/thematic/">temas de colores</a> con <code>{thematic}</code> y <a href="https://r-graph-gallery.com/package/showtext.html">tipografías</a> con <code>{showtext}</code></li>
 <li class="fragment">Aplicaciones <code>{shiny}</code> con <a href="https://rstudio.github.io/bslib/articles/theming/index.html">temas de colores</a> con <code>{bslib}</code></li>
 <li class="fragment">Atención a las tipografías: pares tipográficos ️✒️💎</li>
 <li class="fragment">Selección de paletas de colores llamativas y con personalidad 💅🏼✨</li>
-</ul></li>
 </ul>
 </div>
 </section>
@@ -348,20 +349,46 @@ Bastián Olea Herrera
 <section class="slide level2">
 
 <h3 id="colores">Colores</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Gráficos <code>{ggplot2}</code> con temas de colores:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(thematic)</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>thematic<span class="sc">::</span><span class="fu">thematic_on</span>(<span class="at">bg =</span> <span class="st">"#222222"</span>,</span>
+<span id="cb2-5"><a></a>                      <span class="at">fg =</span> <span class="st">"white"</span>, </span>
+<span id="cb2-6"><a></a>                      <span class="at">accent =</span> <span class="st">"#0CE3AC"</span>)</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a>iris <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb2-10"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Width) <span class="sc">+</span></span>
+<span id="cb2-11"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
 <p>Aplicaciones Shiny con temas de colores, incluyendo gráficos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">thematic_shiny</span>()</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">page_fluid</span>(</span>
-<span id="cb2-4"><a></a>  </span>
-<span id="cb2-5"><a></a>  <span class="at">theme =</span> <span class="fu">bs_theme</span>(</span>
-<span id="cb2-6"><a></a>    <span class="at">bg =</span> color_fondo,</span>
-<span id="cb2-7"><a></a>    <span class="at">fg =</span> color_texto,</span>
-<span id="cb2-8"><a></a>    <span class="at">primary =</span> color_primario</span>
-<span id="cb2-9"><a></a>  )</span>
-<span id="cb2-10"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(shiny)</span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(thematic)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="fu">thematic_shiny</span>()</span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">page_fluid</span>(</span>
+<span id="cb3-7"><a></a>  <span class="at">theme =</span> <span class="fu">bs_theme</span>(<span class="at">bg =</span> color_fondo,</span>
+<span id="cb3-8"><a></a>                   <span class="at">fg =</span> color_texto,</span>
+<span id="cb3-9"><a></a>                   <span class="at">primary =</span> color_primario</span>
+<span id="cb3-10"><a></a>  )</span>
+<span id="cb3-11"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br> Recursos para encontrar colores: - <a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a> - <a href="https://pigment.shapefactory.co">pigment.shapefactory.co</a>, paletas de colores - <a href="https://2colors.colorion.co">2colors.colorion.co</a>, pares de colores - <a href="https://www.realtimecolors.com">realtimecolors.com</a>, simulador de interfaz web con paletas de colores</p>
+</div></div>
+<p><br></p>
+<p>Recursos para encontrar colores:</p>
+<ul>
+<li><a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a></li>
+<li><a href="https://pigment.shapefactory.co">pigment.shapefactory.co</a>, paletas de colores</li>
+<li><a href="https://2colors.colorion.co">2colors.colorion.co</a>, pares de colores</li>
+<li><a href="https://www.realtimecolors.com">realtimecolors.com</a>, simulador de interfaz web con paletas de colores</li>
+</ul>
 </section></section>
 <section>
 <section id="compartir" class="title-slide slide level1 center">
@@ -385,15 +412,11 @@ Bastián Olea Herrera
 <section id="crear" class="slide level2">
 <h2>Crear</h2>
 <ul>
-<li>Crear repositorios en <a href="https://github.com/bastianolea">GitHub</a> con <code>{usethis}</code> 📦
-<ul>
+<li>Crear repositorios en <a href="https://github.com/bastianolea">GitHub</a> con <code>{usethis}</code> 📦</li>
 <li>Archivos <code>readme.md</code> para documentar y ofrecer contexto</li>
-</ul></li>
 <li>Subir código <em>suelto</em> a <a href="https://gist.github.com">Gists de GitHub</a> 🗒️</li>
-<li>Compartir código en redes sociales 🤓
-<ul>
+<li>Compartir código en redes sociales 🤓</li>
 <li>Herramientas para <a href="https://carbon.now.sh">crear</a> <em><a href="https://ray.so">pantallazos</a></em> 📸</li>
-</ul></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -420,20 +443,20 @@ Bastián Olea Herrera
 <h3 id="crear-un-repositorio-en-github">Crear un repositorio en GitHub</h3>
 <p>Crear un repositorio local para tu código:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git</span>() <span class="co"># crear repositorio local</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git</span>() <span class="co"># crear repositorio local</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Configurar GitHub:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() <span class="co"># crear token de tu cuenta</span></span>
-<span id="cb4-2"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>() <span class="co"># guardar token para autorizar tu pc</span></span>
-<span id="cb4-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"usuario"</span>, <span class="at">user.email =</span> <span class="st">"correo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() <span class="co"># crear token de tu cuenta</span></span>
+<span id="cb5-2"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>() <span class="co"># guardar token para autorizar tu pc</span></span>
+<span id="cb5-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"usuario"</span>, <span class="at">user.email =</span> <span class="st">"correo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Subir tu repositorio local a GitHub, creando un <em>espejo</em> de tu código en el repositorio remoto:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_github</span>() <span class="co"># subir repo local a github</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_github</span>() <span class="co"># subir repo local a github</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Revisa el <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_github/">tutorial completo aquí!</a></p>
@@ -443,18 +466,18 @@ Bastián Olea Herrera
 <h3 id="crear-un-archivo-readme.md">Crear un archivo <code>readme.md</code></h3>
 <p>Crea un archivo de texto <em>Markdown</em> (extensión <code>.md</code>) para explicar al mundo de qué se trata tu repositorio!</p>
 <p><em>Titulares:</em></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu"># Título 1</span></span>
-<span id="cb6-2"><a></a><span class="fu">## Título 2</span></span>
-<span id="cb6-3"><a></a><span class="fu">### Título 3, etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="fu"># Título 1</span></span>
+<span id="cb7-2"><a></a><span class="fu">## Título 2</span></span>
+<span id="cb7-3"><a></a><span class="fu">### Título 3, etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>Estilos de texto:</em></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a>**negrita**</span>
-<span id="cb7-2"><a></a>*itálica* o _itálica_</span>
-<span id="cb7-3"><a></a>&lt;u&gt;subrayado&lt;/u&gt;</span>
-<span id="cb7-4"><a></a>~~tachado~~</span>
-<span id="cb7-5"><a></a><span class="in">`código`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a>**negrita**</span>
+<span id="cb8-2"><a></a>*itálica* o _itálica_</span>
+<span id="cb8-3"><a></a>&lt;u&gt;subrayado&lt;/u&gt;</span>
+<span id="cb8-4"><a></a>~~tachado~~</span>
+<span id="cb8-5"><a></a><span class="in">`código`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>Imágenes:</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="sc">!</span>[](mapache.jpeg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="sc">!</span>[](mapache.jpeg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>En cierta forma es como una página web muy básica 🥺</p>
 </section>
@@ -493,8 +516,8 @@ Bastián Olea Herrera
 <li>Subir documento Quarto a un repositorio GitHub</li>
 <li>Crear un archivo <code>_quarto.yml</code>:</li>
 </ol>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb9-2"><a></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb10-2"><a></a><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="3" type="1">
 <li>Creamos un archivo vacío llamado <code>.nojekyll</code></li>
 <li>Subir cambios del repositorio local al <strong>repositorio remoto</strong> en GitHub</li>
@@ -557,8 +580,8 @@ Bastián Olea Herrera
 <p>Hugo es una plataforma para crear blogs en base a Markdown y el lenguaje de programación Go. Gracias al tema <a href="https://hugo-apero-docs.netlify.app">Hugo Apéro</a> se puede crear un blog elegante y funcional desde R en pocos pasos.</p>
 <p>Instalar <code>{blogdown}</code> e instalar Hugo:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">install.packages</span>(<span class="st">"blogdown"</span>)</span>
-<span id="cb10-2"><a></a>blogdown<span class="sc">::</span><span class="fu">install_hugo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">install.packages</span>(<span class="st">"blogdown"</span>)</span>
+<span id="cb11-2"><a></a>blogdown<span class="sc">::</span><span class="fu">install_hugo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div></div>
 <p>Instrucciones detalladas <a href="https://hugo-apero-docs.netlify.app">disponibles en este blog.</a></p>
@@ -568,21 +591,21 @@ Bastián Olea Herrera
 <h3 id="blog-hugo-1">Blog Hugo</h3>
 <p>Creamos el blog con la siguiente función:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(blogdown)</span>
-<span id="cb11-2"><a></a><span class="fu">new_site</span>(<span class="at">theme =</span> <span class="st">"hugo-apero/hugo-apero"</span>, </span>
-<span id="cb11-3"><a></a>           <span class="at">format =</span> <span class="st">"toml"</span>,</span>
-<span id="cb11-4"><a></a>           <span class="at">sample =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb11-5"><a></a>           <span class="at">empty_dirs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(blogdown)</span>
+<span id="cb12-2"><a></a><span class="fu">new_site</span>(<span class="at">theme =</span> <span class="st">"hugo-apero/hugo-apero"</span>, </span>
+<span id="cb12-3"><a></a>         <span class="at">format =</span> <span class="st">"toml"</span>,</span>
+<span id="cb12-4"><a></a>         <span class="at">sample =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-5"><a></a>         <span class="at">empty_dirs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Para ver el sitio ejecutamos <code>blogdown::serve_site()</code></p>
 <p>Tenemos la función <code>blogdown::new_post()</code> crear un nuevo post:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>blogdown<span class="sc">::</span><span class="fu">new_post</span>(<span class="at">title =</span> <span class="st">"Mi primer post en Hugo"</span>, </span>
-<span id="cb12-2"><a></a>                   <span class="at">subdir =</span> <span class="st">"blog/"</span>,</span>
-<span id="cb12-3"><a></a>                   <span class="at">file =</span> <span class="st">"blog/primero/index.md"</span>,</span>
-<span id="cb12-4"><a></a>                   <span class="at">author =</span> <span class="st">"Bastián Olea Herrera"</span>,</span>
-<span id="cb12-5"><a></a>                   <span class="at">tags =</span> <span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"gráficos"</span>, <span class="st">"curiosidades"</span>)</span>
-<span id="cb12-6"><a></a>                   )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>blogdown<span class="sc">::</span><span class="fu">new_post</span>(<span class="at">title =</span> <span class="st">"Mi primer post en Hugo"</span>, </span>
+<span id="cb13-2"><a></a>                   <span class="at">subdir =</span> <span class="st">"blog/"</span>,</span>
+<span id="cb13-3"><a></a>                   <span class="at">file =</span> <span class="st">"blog/primero/index.md"</span>,</span>
+<span id="cb13-4"><a></a>                   <span class="at">author =</span> <span class="st">"Bastián Olea Herrera"</span>,</span>
+<span id="cb13-5"><a></a>                   <span class="at">tags =</span> <span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"gráficos"</span>, <span class="st">"curiosidades"</span>)</span>
+<span id="cb13-6"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
@@ -603,10 +626,10 @@ Bastián Olea Herrera
 <h3 id="blog-hugo-3">Blog Hugo</h3>
 <p>Como Hugo usa Markdown y no Quarto, si queremos crear documentos <code>.qmd</code> que usen los resultados del código de R, debemos agregar lo siguiente al encabezado de cada post:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>format<span class="sc">:</span></span>
-<span id="cb13-2"><a></a>  hugo<span class="sc">-</span>md<span class="sc">:</span></span>
-<span id="cb13-3"><a></a>    output<span class="sc">-</span>file<span class="sc">:</span> <span class="st">"index"</span></span>
-<span id="cb13-4"><a></a>    output<span class="sc">-</span>ext<span class="sc">:</span> <span class="st">"md"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>format<span class="sc">:</span></span>
+<span id="cb14-2"><a></a>  hugo<span class="sc">-</span>md<span class="sc">:</span></span>
+<span id="cb14-3"><a></a>  output<span class="sc">-</span>file<span class="sc">:</span> <span class="st">"index"</span></span>
+<span id="cb14-4"><a></a>output<span class="sc">-</span>ext<span class="sc">:</span> <span class="st">"md"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
