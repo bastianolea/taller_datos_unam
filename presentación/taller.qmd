@@ -1,5 +1,6 @@
 ---
-title: "Taller"
+title: "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales"
+subtitle: "Diplomado de Ciencia de Datos para Ciencias Sociales y Humanidades"
 author: "Bastián Olea Herrera"
 format: 
   revealjs:
@@ -12,30 +13,32 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Sitio
+## Temario
+- Mi experiencia con el análisis de datos desde la **sociología**
+- Revisar algunos de mis proyectos de **análisis de datos con R**
+- Principios para guiarnos:
+  1. _Crear_
+  2. _Diferenciarse_
+  3. _Compartir_
+- **Consejos prácticos** para lograrlo <span style="font-size: 120%; color: #9069C0;">♥</span>
 
-![](img/sitio.png){.borde .linea}
 
-----
-
-### Blog
-
-:::: {.columns}
-
-::: {.column width="45%" style="margin-top:10px;"}
-![](img/blog1.png){.borde .linea}
-::: 
-::: {.column width="55%" style="margin-top:-28px;"}
-![](img/blog2.png){.borde .linea}
-::: 
-::::
+# Trayectoria
 
 ----
 
-### Aplicaciones
+## Portafolio
 
-Aplicaciones bla bla
-https://bastianolea.github.io/shiny_apps/
+Aplicaciones desarrolladas en R y `{shiny}` centradas en visualización de datos públicos
+
+![](img/pantallazo.png){.borde .linea}
+
+
+
+## Aplicaciones
+
+[Página web](https://bastianolea.github.io/shiny_apps/) para presentar mis aplicaciones.
+
 
 :::: {.columns}
 
@@ -49,9 +52,37 @@ https://bastianolea.github.io/shiny_apps/
 
 ::::
 
-----
+Página creada en [R con Quarto](https://quarto.org/docs/computations/r.html) y hosteada en [GitHub Pages](https://docs.github.com/es/pages).
 
-### Datos
+
+
+## Sitio web
+<https://bastianolea.rbind.io>
+
+Sitio web sobre contenido de R, principalmente guías, tutoriales y recomendaciones
+
+![](img/sitio.png){.borde .linea}
+
+
+
+## Blog de R
+<https://bastianolea.rbind.io>
+
+Blog donde puedo compartir cosas que aprendo, consejos para los demás, y guías para invitar a que más gente use estas herramientas.
+
+:::: {.columns}
+
+::: {.column width="45%" style="margin-top:10px;"}
+![](img/blog1.png){.borde .linea}
+::: 
+::: {.column width="55%" style="margin-top:-28px;"}
+![](img/blog2.png){.borde .linea}
+::: 
+::::
+
+
+
+## Repositorio de datos
 
 :::: {.columns}
 
@@ -60,59 +91,139 @@ https://bastianolea.github.io/shiny_apps/
 :::
 
 ::: {.column width="40%"}
-Datos bla bla
-https://bastianolea.github.io/datos_sociales/
-:::
-::::
+- [Otra página web](https://bastianolea.github.io/datos_sociales/) donde voy manteniendo un repositorio de datos sociales que he usado para otros proyectos.
+- La idea es recolectar todo en un mismo lugar para **facilitar el acceso a datos**.
+- Cada proyecto contiene **datos limpios/procesados**, código abierto para **procesar y explorar** los datos, y ejemplos de visualización asociados.
 
-## Quarto
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
 :::
 
 ::::
 
+Esta página también fue creada en [R con Quarto](https://quarto.org/docs/computations/r.html), principalmente con una tabla hecha con [el paquete `{gt}`](https://gt.rstudio.com), y hosteada en [GitHub Pages](https://docs.github.com/es/pages).
 
-## Bullets
 
-When you click the **Render** button a document will be generated that includes:
 
--   Content authored with markdown
--   Output from executable code
+# Creación
 
-## Code
 
-When you `click` the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+## Creación
+
+::: {.incremental}
+- Desarrollar temas de su **experticia, campo o disciplina** 🔬
+- Abordar temas de **relevancia social ** ✊🏼
+- Hacer públicos **estudios o investigaciones académicas** 📝
+- Explorar repositorios de **datos públicos**
+- **Reutilización** de datos públicos ♻️
+- Participar de [TidyTuesday](https://github.com/rfordatascience/tidytuesday) 🌎
+- [Latin R](https://latinr.org), presentar trabajos [hasta el 25 de agosto](https://latinr.org/blog/es/2025-05-31-presentacion-trabajos-2025.html)
+
+:::
 
 . . .
 
-```{r}
-library(dplyr)
-frutas_x <- tibble(fruta = c("pera", "manzana", "uva"),
-                   color = c("verde", "roja", "morada"))
-```
+Siempre va a haber gente interesada! ☺️
 
 
-## Tipografías
+
+## Ejemplos
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Portal de reutilización del sitio de [Datos Abiertos del Gobierno de Chile](https://datos.gob.cl/data_reuse)
+
+![](img/reutilizacion.png){.borde}
+::: 
+
+::: {.column width="50%"}
+Visualizador de datos de [proyecciones de población del Censo, Chile](https://bastianoleah.shinyapps.io/censo_proyecciones/)
+
+![](img/app_censo.png){.borde}
+::: 
+
+::::
+
+
+# Diferenciación 
+
+
+
+## Diferenciación
+
+::: {.incremental}
+- Abordar temáticas de forma **inclusiva** a todo público
+- Preocuparse por la apariencia de los productos!
+  - Gráficos `{ggplot2}` con [temas de colores](https://rstudio.github.io/thematic/) con `{thematic}` y [tipografías](https://r-graph-gallery.com/package/showtext.html) con `{showtext}` 
+  - Aplicaciones `{shiny}` con [temas de colores](https://rstudio.github.io/bslib/articles/theming/index.html) con `{bslib}`
+  - Atención a las tipografías: pares tipográficos ️✒️💎
+  - Selección de paletas de colores llamativas y con personalidad 💅🏼✨
+:::
+
+----
+
+
+### Tipografías
 - [fonts.google.com](https://fonts.google.com/), tipografías de Google
 - [fontpair.co](https://www.fontpair.co/all), pares de tipografías
 
-## Colores
+<br>
+
+### Colores
 
 - [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 - [pigment.shapefactory.co](https://pigment.shapefactory.co), paletas de colores
 - [2colors.colorion.co](https://2colors.colorion.co), pares de colores
 - [realtimecolors.com](https://www.realtimecolors.com), simulador de interfaz web con paletas de colores
+
+
+
+# Compartir 
+
+
+## Compartir 
+
+_Diagnóstico:_ estado actual de la internet 😕
+
+- Lugares para hacer comunidad: [Bluesky](https://bsky.app), redes sociales
+- Participar de [Stack Overflow](https://stackoverflow.com/collectives/r-language)
+- Comunidades de R, grupos RLadies
+
+. . .
+
+- ¿Crear tu propia comunidad? 🐣
+
+
+
+## Crear
+
+- Crear repositorios en [GitHub](https://github.com/bastianolea) con `{usethis}` 📦
+  - Archivos `readme.md` para documentar y ofrecer contexto
+- Subir código _suelto_ a [Gists de GitHub](https://gist.github.com) 🗒️
+- Compartir código en redes sociales 🤓
+  - Herramientas para [crear](https://carbon.now.sh) _[pantallazos](https://ray.so)_ 📸
+
+
+
+## Crear
+
+Crear un lugar, volverse _encontrable_
+
+::: {.incremental}
+- [Crear documentos Quarto](https://bastianolea.rbind.io/blog/quarto_reportes/) para compartir resultados hechos con R 📄
+- [Subir documentos Quarto a GitHub pages](https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#documento-quarto-en-github-pages), tu propia página web estática para tu proyecto 🚀
+- [Crear un blog con Quarto](https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#blogs-quarto-en-github-pages), el paso siguiente para construir tu presencia en la web 🤩
+- [Blog Hugo](https://hugo-apero.netlify.app https://hugo-apero-docs.netlify.app), una alternativa más rápida pero menos personalizable 🌷
+- [Dominio Rbind.io](https://support.rbind.io/about/) para darle el toquecito neRd 🧐
+- [Crea aplicaciones web interactivas con Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) y [súbelas a la web](https://www.shinyapps.io) rápido y gratis 🪐
+:::
+
+----
+
+## Consejos
+
+- Crea cosas [que te sirvan]{.fragment}[, que te conecten]{.fragment}[, y que sean socialmente relevantes]{.fragment}
+- Escribe _bocetos_ ✍🏼
+- Escribe todo lo que aprendes! 📒
+- Trata de dar de vuelta lo que has recibido 💖
+
