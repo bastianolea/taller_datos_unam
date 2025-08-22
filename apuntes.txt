@@ -43,10 +43,10 @@ Usar lenguaje inclusivo para personas de distintos niveles de conocimientos
 
 
 ## Distinguirse
-ggplot2 con tipografías 
-Shiny app con temas
+ggplot2 con tipografías: https://r-graph-gallery.com/package/showtext.html
+ggplot2 con temas: https://rstudio.github.io/thematic/
+Shiny app con temas: https://rstudio.github.io/bslib/articles/theming/index.html
 Pares tipográficos
-ggplot2 con temas
 
 
 ## Compartir
@@ -55,6 +55,7 @@ Redes sociales
 crear repositorios github, usethis
 Readme, subir repo con imágenes y enlaces
 Github Gist
+Imágenes de código: https://carbon.now.sh, https://ray.so
 Hashtags, colgarse de otras cuentas
 Tidytuesday
 
