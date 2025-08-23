@@ -409,7 +409,7 @@ Revisa el [tutorial de Quarto aquí!](https://bastianolea.rbind.io/blog/quarto_r
 2. Crear un archivo `_quarto.yml`:
 ```yaml
 project:
-output-dir: docs
+  output-dir: docs
 ```
 3. Creamos un archivo vacío llamado `.nojekyll`
 4. Subir cambios del repositorio local al **repositorio remoto** en GitHub
@@ -582,3 +582,5 @@ Guía para subir tu app [en este tutorial!](https://bastianolea.rbind.io/blog/r_
 
 
 # Gracias <span style="font-size: 110%; color: #9069C0;">♥</span>
+
+Puedes escribirme cualquier duda o comentario [por aquí](https://bastianolea.rbind.io/contact/)

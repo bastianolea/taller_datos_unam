@@ -25,6 +25,7 @@ hablar de trayectoria personal
 sociología, teoría de género
 magíster: cursos cuantitativos
 autodidacta
+
 creación de proyectos de análisis de datos enfocados en problemáticas sociales y economía
 
 División de políticas y estudios, Subsecretaría de desarrollo regional y administrativo
